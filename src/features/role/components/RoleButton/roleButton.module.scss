@@ -1,0 +1,74 @@
+// * Layout for the role-selection card used on the RoleSelectorPage.
+// *
+// * Visual model (matches the landing-page design):
+// *   [ icon tile ]   [ title ]            [ chevron ]
+// *                   [ description ]
+// *
+// * The RTL-configured MUI theme flips horizontal direction, so the icon
+// * sits on the right side of the card while the chevron trails on the
+// * left — matching the reference image without any extra overrides.
+.root {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border-radius: 14px;
+  background-color: #f5f6fb;
+  border: 1px solid #eceef5;
+  text-align: inherit;
+  transition:
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.root:hover {
+  background-color: #eef0f9;
+  box-shadow: 0 6px 18px rgba(46, 53, 99, 0.08);
+}
+
+.root:focus-visible {
+  outline: 2px solid #5b6cff;
+  outline-offset: 2px;
+}
+
+.iconTile {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eceffa;
+  color: #4a5063;
+}
+
+.text {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  gap: 0.125rem;
+}
+
+.label {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #1f2340;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 0.8125rem;
+  color: #8a90a8;
+  line-height: 1.3;
+}
+
+.chevron {
+  flex: 0 0 auto;
+  color: #a5adc4;
+}

@@ -1,0 +1,40 @@
+// * Layout for the role-based bottom navigation bar (Req 11.1-11.3, 12.1).
+// *
+// * The bar sits fixed at the viewport bottom on every screen size so it
+// * reads as a native-style tab bar, matching the landing-page design.
+// * MainLayout reserves matching padding on `.content` so page scroll
+// * content never hides underneath the bar.
+.nav {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 20;
+  background-color: #ffffff;
+  border-top: 1px solid #eef0f6;
+  box-shadow: 0 -4px 14px rgba(16, 24, 40, 0.04);
+}
+
+.bar {
+  min-height: 64px;
+  background-color: transparent;
+}
+
+.action {
+  color: #8a90a8;
+  gap: 0.25rem;
+  min-width: 0;
+
+  :global(.MuiBottomNavigationAction-label) {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+  }
+
+  &:global(.Mui-selected) {
+    color: #4a63f7;
+  }
+
+  &:global(.Mui-selected) :global(.MuiBottomNavigationAction-label) {
+    font-size: 0.75rem;
+  }
+}

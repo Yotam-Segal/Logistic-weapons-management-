@@ -1,0 +1,86 @@
+// * Layout for a single IssueRow (Req 6.1, 8.1, 12.1).
+// *
+// * Mirrors `inventoryRow.module.scss` exactly so the two lists feel like
+// * siblings. Only the icon tile colors differ — those are driven inline
+// * from `STATUS_COLOR_MAP`, not from this file.
+.listItem {
+  width: 100%;
+}
+
+.root {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  border: 1px solid #eef0f6;
+  transition:
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.root:hover {
+  background-color: #fafbff;
+  box-shadow: 0 4px 14px rgba(16, 24, 40, 0.06);
+}
+
+.iconTile {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.info {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  overflow: hidden;
+}
+
+.name {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #1f2340;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meta {
+  font-size: 0.8125rem;
+  color: #8a90a8;
+  line-height: 1.2;
+}
+
+.trailing {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+.date {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #1f2340;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .root {
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+}

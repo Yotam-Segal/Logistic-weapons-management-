@@ -1,0 +1,15 @@
+// * Layout for the CoordinateAction control (Req 7.2, 12.1).
+// *
+// * Kept minimal — the drawer's own module handles outer spacing. This
+// * module only aligns the button to stretch on narrow screens so the
+// * tap target is comfortable on phones.
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.button {
+  align-self: stretch;
+}

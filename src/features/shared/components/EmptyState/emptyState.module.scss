@@ -1,0 +1,19 @@
+// * Layout for the shared empty-state indicator.
+// * Centers content vertically and horizontally with comfortable padding
+// * so the message reads as a friendly placeholder inside any list container.
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.message {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}

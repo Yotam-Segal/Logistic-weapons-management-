@@ -1,0 +1,22 @@
+// * StatusChip reads as a small colored label + glyph on a light surface.
+// * Color is set inline via the `style` prop (driven by STATUS_COLOR_MAP)
+// * so the module only owns layout and sizing (Req 3.3, 6.2, 8.2, 10.1).
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9375rem;
+}
+
+.label {
+  font-size: inherit;
+}

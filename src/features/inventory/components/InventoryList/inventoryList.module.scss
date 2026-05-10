@@ -1,0 +1,10 @@
+// * Layout for the InventoryList container (Req 3.1, 12.1).
+// *
+// * Rows are card-shaped (see `inventoryRow.module.scss`) so the list is
+// * just a vertical stack with comfortable gap between cards.
+.root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}

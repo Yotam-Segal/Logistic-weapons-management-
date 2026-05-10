@@ -1,0 +1,41 @@
+// * Responsive width for the app-wide drawer.
+// * xs: full-viewport width so drawer content has room on phones.
+// * md+: fixed width so the parent list stays visible alongside the drawer.
+.drawerPaper {
+  width: 100vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+@media (min-width: 900px) {
+  .drawerPaper {
+    width: 420px;
+    max-width: 420px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.body {
+  padding: 1rem 1.25rem;
+  overflow-y: auto;
+  flex: 1;
+}

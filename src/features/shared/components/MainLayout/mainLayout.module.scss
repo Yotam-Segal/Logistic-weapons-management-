@@ -1,0 +1,18 @@
+// * Vertical stack for the main app shell (Req 11.1-11.3, 12.1). Header
+// * docks to the top, page content fills the middle, and TabsNav fixes to
+// * the bottom via its own module. `.content` reserves bottom padding so
+// * the fixed bar never overlaps page scroll content.
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f3f5fb;
+}
+
+.content {
+  flex: 1 1 auto;
+  width: 100%;
+  box-sizing: border-box;
+  // * Matches BottomNavigation min-height (64px) plus a small breathing gap.
+  padding-bottom: calc(64px + env(safe-area-inset-bottom, 0));
+}

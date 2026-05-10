@@ -1,0 +1,13 @@
+// * Global styles shared across the app
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Rubik', 'Heebo', 'Segoe UI', 'Arial', sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+}

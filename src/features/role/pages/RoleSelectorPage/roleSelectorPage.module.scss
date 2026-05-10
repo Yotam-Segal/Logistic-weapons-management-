@@ -1,0 +1,96 @@
+// * Layout for the role selection landing page.
+// *
+// * The page is a full-viewport flex column that centers a white card
+// * and places a small footer tagline below it. The card itself stacks
+// * a branded header (gradient icon + name + subtitle) on top of the
+// * role cards — matching the reference landing-page design
+// * (Req 1.1, 1.2, 12.1).
+.root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  background-color: #f3f5fb;
+  gap: 1.5rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 26rem;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 2rem 1.75rem 1.75rem;
+  box-shadow: 0 24px 60px rgba(46, 53, 99, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-sizing: border-box;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brandIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #5b6cff 0%, #4a3dd9 100%);
+  box-shadow: 0 10px 22px rgba(74, 61, 217, 0.28);
+  margin-bottom: 0.25rem;
+}
+
+.brandIcon svg {
+  font-size: 1.75rem;
+}
+
+.brandName {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1f2340;
+  letter-spacing: 0.2px;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: #8a90a8;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+}
+
+.footer {
+  margin: 0;
+  font-size: 0.6875rem;
+  letter-spacing: 2px;
+  color: #a5adc4;
+  text-align: center;
+}
+
+// * Tighten outer padding on phones so the card still breathes on xs.
+@media (max-width: 600px) {
+  .root {
+    padding: 1.5rem 1rem;
+  }
+
+  .card {
+    padding: 1.75rem 1.25rem 1.5rem;
+  }
+}

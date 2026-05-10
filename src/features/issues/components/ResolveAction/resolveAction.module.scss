@@ -1,0 +1,19 @@
+// * Layout for the ResolveAction control (Req 9.2, 12.1).
+// *
+// * Kept minimal — the drawer's own module handles outer spacing. This
+// * module stacks the comment field and button and stretches them so the
+// * tap target is comfortable on phones.
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.field {
+  width: 100%;
+}
+
+.button {
+  align-self: stretch;
+}

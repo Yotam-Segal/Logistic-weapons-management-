@@ -1,0 +1,46 @@
+// * Layout for the ItemDrawer contents (Req 5.1, 12.1).
+// *
+// * The drawer itself is sized by AppDrawer (full-width on xs, 420px on md+).
+// * This module styles only the inner sections so the drawer body reads as
+// * two stacked blocks: the item detail block, and the report issue form.
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  margin: 0;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}

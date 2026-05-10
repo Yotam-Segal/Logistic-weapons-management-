@@ -1,0 +1,47 @@
+// * Layout for the IssueDrawer contents (Req 7.1, 9.1, 12.1).
+// *
+// * The drawer itself is sized by AppDrawer (full-width on xs, 420px on md+).
+// * This module styles only the inner sections so the drawer body reads as
+// * two stacked blocks: the issue detail block and the role-specific action
+// * slot.
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  margin: 0;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}

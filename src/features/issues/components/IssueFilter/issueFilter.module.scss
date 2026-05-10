@@ -1,0 +1,57 @@
+// * Pill group styling mirrors `InventoryFilter` so both heroes share the
+// * exact same visual language — ghost pills on the navy band, white fill
+// * for the active pill, even-stretch on phones for easy tapping.
+.root {
+  display: inline-flex;
+  gap: 0.5rem;
+  background-color: transparent;
+  border: none;
+  flex-wrap: wrap;
+}
+
+.root :global(.MuiToggleButtonGroup-grouped) {
+  border-radius: 999px;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.pill {
+  --pill-fg: rgba(255, 255, 255, 0.82);
+  border-radius: 999px !important;
+  padding: 0.375rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--pill-fg);
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  text-transform: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  line-height: 1;
+  min-width: auto;
+}
+
+.pill:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.pill:global(.Mui-selected),
+.pill:global(.Mui-selected):hover {
+  background-color: #ffffff;
+  color: #1f2340;
+  border-color: #ffffff !important;
+}
+
+@media (max-width: 600px) {
+  .root {
+    display: flex;
+    width: 100%;
+  }
+
+  .pill {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+}

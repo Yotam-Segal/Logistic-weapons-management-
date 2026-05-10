@@ -1,0 +1,68 @@
+// * Visual parity with `inventoryHero.module.scss` — the two pages sit
+// * under the same shell and should share the exact same hero treatment
+// * so the bottom-tab switch doesn't feel like a jump.
+.root {
+  background: linear-gradient(180deg, #0f1b3c 0%, #111f46 100%);
+  color: #ffffff;
+  padding: 1.25rem 1.5rem 1.5rem;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  box-sizing: border-box;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: start;
+  color: #ffffff;
+  letter-spacing: 0.2px;
+}
+
+.search {
+  width: 100%;
+}
+
+.searchInput {
+  background-color: rgba(255, 255, 255, 0.96);
+  border-radius: 10px;
+  color: #1f2340;
+
+  :global(.MuiOutlinedInput-input) {
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+  }
+
+  :global(.MuiOutlinedInput-input)::placeholder {
+    color: #8a90a8;
+    opacity: 1;
+  }
+}
+
+.searchOutline {
+  border: none;
+}
+
+.searchIcon {
+  color: #8a90a8;
+}
+
+.filter {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (max-width: 600px) {
+  .root {
+    padding: 1rem 1rem 1.25rem;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+}

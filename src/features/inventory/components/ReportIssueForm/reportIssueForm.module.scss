@@ -1,0 +1,24 @@
+// * Layout for the ReportIssueForm shown inside the ItemDrawer.
+// * The form stacks fields vertically at all breakpoints because the drawer
+// * is narrow by design; on phones (xs, up to 600px) the drawer becomes
+// * full-width and the form simply expands along with it (Req 5.2, 12.1).
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.field {
+  width: 100%;
+}
+
+.submit {
+  align-self: flex-end;
+}
+
+@media (max-width: 600px) {
+  .submit {
+    align-self: stretch;
+  }
+}

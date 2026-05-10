@@ -1,0 +1,14 @@
+// * Layout for the header LocationSelector.
+// * Gives the MUI Select a comfortable minimum width so the location name
+// * isn't truncated on desktop; on phones (xs, up to 600px per MUI breakpoints)
+// * the control shrinks and stretches to the available space (Req 2.1, 12.1).
+.root {
+  min-width: 14rem;
+}
+
+@media (max-width: 600px) {
+  .root {
+    min-width: 10rem;
+    width: 100%;
+  }
+}

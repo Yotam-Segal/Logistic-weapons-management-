@@ -1,0 +1,32 @@
+// * Layout for the inventory page (Req 12.1).
+// *
+// * The hero spans the full page width; the list sits below on a light
+// * surface with comfortable gutters so each row breathes.
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.list {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+  .root {
+    gap: 1.25rem;
+  }
+
+  .list {
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .list {
+    padding: 1.5rem 2rem;
+  }
+}
